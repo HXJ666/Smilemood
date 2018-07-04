@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>requestAnimationFrame</title>
+    <style>
+        #SomeElementYouWantToAnimate {
+            width: 100px;
+            height: 100px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<div id="SomeElementYouWantToAnimate"></div>
+<script>
+    var start = null;
+    var element = document.getElementById('SomeElementYouWantToAnimate');
+    element.style.position = 'absolute';
+    //function step为requestAnimationFrame回调函数，这个回调函数有一个传参，DOMHighResTimeStamp，
+    // 指示从触发 requestAnimationFrame 回调到现在（重新渲染页面内容之前）的时间（从 performance.now() 取得）。
+    function step(timestamp) {
+        // start赋值只执行一次
+        if (!start) start = timestamp;
+        //profress数值会随着事件一直变大
+        var progress = timestamp - start;
+        //控制el的动画属性变动的限值，这里为控制el的left
+        element.style.left = Math.min(progress / 10, 200) + 'px';
+        //判断控制动画执行时间
+        if (progress < 20000) {
+            window.requestAnimationFrame(step);
+        }
+    }
+
+    window.requestAnimationFrame(step);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>投票</title>
+    <style>
+        input[type=search] {
+            -webkit-appearance: textfield;
+            -webkit-box-sizing: content-box;
+            font-family: inherit;
+            font-size: 100%;
+        }
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button {
+            display: none;
+        }
+        .contains {
+            width: 92%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+        }
+        .activity-data-item {
+            display: inline-block;
+            width: 32%;
+            text-align: center;
+            border-left: 1px solid black;
+        }
+        .activity-data-item:first-child{
+             border-left:none;
+         }
+        .search-box {
+            margin: auto;
+            width: 80%;
+        }
+        .search-button {
+            width: 100%;
+            border-radius: 11px;
+            padding-left: 10px;
+        }
+        .item-wrap {
+            display: inline-block;
+            width: 49%;
+        }
+        .item-num {
+            position: absolute;
+        }
+        .item-img-wrap {
+            height: 150px;
+        }
+        .item-img {
+            position: relative;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            height: 100%;
+        }
+        .vote-num {
+            float: right;
+        }
+        .to-vote {
+            position: relative;
+            top: -10px;
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="../reset.css">
+</head>
+<body>
+<!--头图-->
+<div class="banner">
+    <img style="width: 100%" src="../微盟官网/img/example/examplebanner.jpg"/>
+</div>
+<div class="contains">
+    <!--倒计时-->
+    <div class="time-box"></div>
+    <!--活动名称-->
+    <div class="title-box">
+        男神女神自拍hhh男神女神自拍hhh男神女神自拍hhh男神女神自拍hhh男神女神自拍hhh男神女神自拍hhh
+    </div>
+    <!--按钮-->
+    <div class="button-box"></div>
+    <!--搜索框-->
+    <div class="search-box">
+        <input class="search-button" type="search" placeholder="请输入选手编号或姓名">
+    </div>
+    <!--活动数据-->
+    <div class="activity-data">
+        <span class="activity-data-item"><div>参赛选手</div><div>116</div></span>
+        <span class="activity-data-item"><div>累计投票</div><div>3112</div></span>
+        <span class="activity-data-item"><div>访问量</div><div>36675</div></span>
+    </div>
+    <div class="nav">
+        <span>最新参赛</span><span>总排行榜</span><span>活动详情</span>
+    </div>
+    <!--活动详情-->
+    <div class="activity-detail">
+        <!--一个选手-->
+        <div class="item-wrap">
+            <!--选手编号-->
+            <div class="item-num">编号：117</div>
+            <!--选手图片-->
+            <div class="item-img-wrap">
+            <div class="item-img" style="background-image: url('../微盟官网/img/index/ban_buss.png')"></div>
+            </div>
+            <!--选手姓名和票数-->
+            <div class="item-mes">
+                <span>名字</span><span class="vote-num">5票</span>
+            </div>
+            <div class="to-vote">投票</div>
+        </div>
+        <div class="item-wrap">
+            <!--选手编号-->
+            <div class="item-num">编号：117</div>
+            <!--选手图片-->
+            <div class="item-img-wrap">
+                <div class="item-img" style="background-image: url('../微盟官网/img/index/ban_buss.png')"></div>
+            </div>
+            <!--选手姓名和票数-->
+            <div class="item-mes">
+                <span>名字</span><span class="vote-num">5票</span>
+            </div>
+            <div class="to-vote">投票</div>
+        </div>
+        <div class="item-wrap">
+            <!--选手编号-->
+            <div class="item-num">编号：117</div>
+            <!--选手图片-->
+            <div class="item-img-wrap">
+                <div class="item-img" style="background-image: url('../微盟官网/img/index/ban_buss.png')"></div>
+            </div>
+            <!--选手姓名和票数-->
+            <div class="item-mes">
+                <span>名字</span><span class="vote-num">5票</span>
+            </div>
+            <div class="to-vote">投票</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
